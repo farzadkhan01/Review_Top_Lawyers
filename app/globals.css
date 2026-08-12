@@ -1,26 +1,72 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  Design tokens for Review Top Lawyers.
+  Centralized here so colors/fonts are never hardcoded in components.
+  See DESIGN.md for the rationale behind this palette.
+*/
+@theme {
+  --color-navy-50: #eef2f7;
+  --color-navy-100: #d7e0ec;
+  --color-navy-200: #b0c1d9;
+  --color-navy-300: #85a0c2;
+  --color-navy-400: #5a7ca5;
+  --color-navy-500: #3c5e85;
+  --color-navy-600: #2a4666;
+  --color-navy-700: #1e3450;
+  --color-navy-800: #16283f;
+  --color-navy-900: #101d2e;
+  --color-navy-950: #0a1220;
+
+  --color-gold-400: #d9bd86;
+  --color-gold-500: #c6a15b;
+  --color-gold-600: #ad8845;
+  --color-gold-700: #8c6c34;
+
+  --color-cream-50: #fbf9f5;
+  --color-cream-100: #f5f1e8;
+  --color-cream-200: #ece5d6;
+
+  --color-muted-400: #8992a3;
+  --color-muted-600: #5b6472;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-playfair);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: var(--color-cream-50);
+  --foreground: var(--color-navy-900);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--color-gold-500);
+  color: var(--color-navy-950);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
