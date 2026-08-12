@@ -82,12 +82,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className='flex flex-col gap-2 border-t border-white/10 py-6 text-xs text-cream-100/50 sm:flex-row sm:items-center sm:justify-between'>
+        <div className='flex flex-col gap-2 border-t  border-white/10 py-6 text-xs text-cream-100/50 sm:flex-row items-center justify-center'>
           <p>© {year} Review Top Lawyers. All rights reserved.</p>
-          <p>
-            All lawyer profiles, reviews, and ratings shown are fictional demo
-            content.
-          </p>
         </div>
       </Container>
     </footer>

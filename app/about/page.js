@@ -163,11 +163,11 @@ export default function AboutPage() {
 
       <section className='bg-navy-900 py-16 text-cream-50 sm:py-20'>
         <Container>
-          <Reveal className='flex flex-col items-start gap-4'>
+          <Reveal className='flex flex-col items-center gap-4'>
             <h2 className='font-heading text-2xl font-semibold sm:text-3xl'>
               Ready to Explore?
             </h2>
-            <p className='max-w-xl text-cream-100/80'>
+            <p className='max-w-xl text-cream-100/80 text-center'>
               Browse the directory to see practice areas, lawyer profiles, and
               reviews for yourself.
             </p>
