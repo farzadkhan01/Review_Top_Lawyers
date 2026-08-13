@@ -15,6 +15,8 @@ export const metadata = {
   alternates: { canonical: '/directory' },
 };
 
+export const dynamic = 'force-static';
+
 export default async function DirectoryPage({ searchParams }) {
   const params = await searchParams;
   const initialSearch = typeof params?.q === 'string' ? params.q : '';

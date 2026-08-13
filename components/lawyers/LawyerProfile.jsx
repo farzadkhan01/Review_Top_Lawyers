@@ -59,12 +59,12 @@ export default function LawyerProfile({
               </Button>
               <a
                 href={`tel:${lawyer.phone.replace(/[^\d+]/g, '')}`}
-                className='rounded text-sm font-medium text-navy-800 hover:text-gold-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-600'>
+                className='rounded text-sm font-medium text-navy-800 hover:text-gold-700  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-600'>
                 Call {lawyer.phone}
               </a>
               <a
                 href={`mailto:${lawyer.email}`}
-                className='rounded text-sm font-medium text-navy-800 hover:text-gold-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-600'>
+                className='rounded text-sm font-medium text-navy-800 hover:text-gold-700  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-600'>
                 Email {lawyer.email}
               </a>
             </div>
@@ -80,7 +80,7 @@ export default function LawyerProfile({
               className='font-heading text-2xl font-semibold text-navy-900'>
               About {lawyer.name.split(' ')[0]}
             </h2>
-            <p className='mt-4 break-words text-base leading-relaxed text-muted-600'>
+            <p className='mt-4 wrap-break-word text-base leading-relaxed text-muted-600'>
               {lawyer.fullBio}
             </p>
           </section>
@@ -128,7 +128,7 @@ export default function LawyerProfile({
                       <Link
                         key={area.slug}
                         href={`/directory/${area.slug}`}
-                        className='rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-600'>
+                        className='rounded-full  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-600'>
                         <Badge
                           variant='outline'
                           className='hover:bg-navy-900/5'>

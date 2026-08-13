@@ -36,7 +36,7 @@ export default function ContactPage() {
         <aside className='flex flex-col gap-6'>
           <Reveal>
             <PlaceholderImage
-              src={PLACEHOLDER_IMAGE_CONSULTATION}
+              src='/contact-page.png'
               alt='Placeholder illustration representing a client consultation'
               sizes='(min-width: 1024px) 33vw, 100vw'
             />
@@ -63,7 +63,7 @@ export default function ContactPage() {
                   <dd className='mt-1'>
                     <a
                       href={`tel:${CONTACT_INFO.phone.replace(/[^\d+]/g, '')}`}
-                      className='rounded text-navy-900 hover:text-gold-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-600'>
+                      className='rounded text-navy-900 hover:text-gold-700  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-600'>
                       {CONTACT_INFO.phone}
                     </a>
                   </dd>

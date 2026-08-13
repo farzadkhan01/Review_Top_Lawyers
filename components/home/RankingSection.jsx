@@ -28,7 +28,7 @@ export default function RankingSection() {
               <Reveal delay={index * 0.05}>
                 <Link
                   href={`/lawyers/${lawyer.slug}`}
-                  className='flex flex-wrap items-center gap-4 rounded-md px-5 py-4 transition-colors hover:bg-white focus-visible:outline focus-visible:-outline-offset-2 focus-visible:outline-2 focus-visible:outline-gold-600 sm:flex-nowrap'>
+                  className='flex flex-wrap items-center gap-4 rounded-md px-5 py-4 transition-colors hover:bg-whitefocus-visible:-outline-offset-2 focus-visible:outline-2 focus-visible:outline-gold-600 sm:flex-nowrap'>
                   <span className='font-heading text-xl font-semibold text-gold-700'>
                     {String(index + 1).padStart(2, '0')}
                   </span>
