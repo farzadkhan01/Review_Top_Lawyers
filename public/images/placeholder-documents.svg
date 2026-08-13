@@ -1,9 +1,0 @@
-<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder image">
-  <rect width="400" height="400" fill="#F5F1E8"/>
-  <rect x="130" y="110" width="160" height="200" rx="6" fill="#D7E0EC" opacity="0.5"/>
-  <rect x="110" y="90" width="160" height="200" rx="6" fill="#D7E0EC" opacity="0.75"/>
-  <rect x="90" y="70" width="160" height="200" rx="6" fill="#D7E0EC"/>
-  <line x1="115" y1="110" x2="225" y2="110" stroke="#F5F1E8" stroke-width="6"/>
-  <line x1="115" y1="135" x2="225" y2="135" stroke="#F5F1E8" stroke-width="6"/>
-  <line x1="115" y1="160" x2="200" y2="160" stroke="#F5F1E8" stroke-width="6"/>
-</svg>

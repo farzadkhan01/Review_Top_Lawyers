@@ -50,7 +50,7 @@ export default async function PracticeAreaPage({ params }) {
       <section className='border-b border-cream-200 bg-cream-50 py-16 sm:py-20'>
         <Container>
           <ImageTextSection
-            image={PLACEHOLDER_IMAGE_ARCHITECTURE}
+            image={area.image}
             imageAlt='Placeholder illustration representing professional legal services'>
             <SectionHeading
               titleAs='h1'
