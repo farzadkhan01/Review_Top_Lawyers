@@ -15,7 +15,11 @@ export default function Footer() {
       <Container>
         <div className='grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-5'>
           <div className='lg:col-span-2'>
-            <Logo tone='light' />
+            <Logo
+              imageClassName='w-40 sm:w-50 mb-[16px]'
+              footerImage='/RTL white logo.png'
+              tone='light'
+            />
             <p className='mt-4 max-w-sm text-sm leading-relaxed text-cream-100/70'>
               A modern directory for finding trusted legal representation,
               organized by practice area, location, and reputation.

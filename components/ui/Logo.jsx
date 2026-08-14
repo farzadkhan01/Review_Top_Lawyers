@@ -9,7 +9,12 @@ import Image from 'next/image';
  * Text-based brand mark. Replace the monogram span with an <Image> once a
  * real logo asset is available — the surrounding markup/props stay stable.
  */
-export default function Logo({ tone = 'dark', className }) {
+export default function Logo({
+  tone = 'dark',
+  footerImage = '',
+  className,
+  imageClassName = '',
+}) {
   return (
     <Link
       href='/'
@@ -18,14 +23,16 @@ export default function Logo({ tone = 'dark', className }) {
         tone === 'dark' ? 'text-navy-900' : 'text-cream-50',
         className,
       )}>
-      <Image
-        className='w-32 h-full object-contain'
-        src='/logo.png'
-        width={100}
-        height={100}
-        unoptimized
-        alt='Logo'
-      />
+      {
+        <Image
+          className={`w-32 h-full object-contain ${imageClassName}`}
+          src={footerImage ? footerImage : '/logo.png'}
+          width={100}
+          height={100}
+          unoptimized
+          alt='Logo'
+        />
+      }
     </Link>
   );
 }

@@ -34,7 +34,7 @@ A short call with your lawyer a few days before closing can surface any last-min
     category: 'Real Estate',
     author: 'Review Top Lawyers Editorial Team',
     publishedAt: '2026-04-18',
-    image: '/real-estate.jpg',
+    image: '/realestate.jpg',
     readingTime: '3 min read',
   },
   {
