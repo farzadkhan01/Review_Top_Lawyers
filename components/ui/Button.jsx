@@ -10,6 +10,7 @@ const VARIANT_STYLES = {
     "bg-transparent text-navy-900 ring-1 ring-inset ring-navy-900/20 hover:bg-navy-900/5 hover:ring-navy-900/40",
   ghost: "bg-transparent text-navy-900 hover:bg-navy-900/5",
   light: "bg-cream-50 text-navy-900 hover:bg-cream-100",
+  danger: "bg-red-600 text-white hover:bg-red-700",
 };
 
 const SIZE_STYLES = {
