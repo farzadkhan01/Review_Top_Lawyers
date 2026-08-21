@@ -100,6 +100,7 @@ export default function ContactForm() {
   const [values, setValues] = useState(INITIAL_VALUES);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("idle");
+  const [errorDetail, setErrorDetail] = useState("");
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -115,12 +116,18 @@ export default function ContactForm() {
     if (Object.keys(validationErrors).length > 0) return;
 
     setStatus("submitting");
+    setErrorDetail("");
 
     try {
       await submitContactRequest(values);
       setStatus("success");
       setValues(INITIAL_VALUES);
-    } catch {
+    } catch (error) {
+      console.error("Contact form submission failed:", error);
+      // EmailJS rejects with { status, text }; our own guard clause throws a
+      // plain Error with .message. Fall back to stringifying anything else.
+      const detail = error?.text || error?.message || String(error);
+      setErrorDetail(detail);
       setStatus("error");
     }
   }
@@ -130,8 +137,7 @@ export default function ContactForm() {
       <div role="status" className="rounded-lg border border-cream-200 bg-white p-8 text-center">
         <h3 className="font-heading text-xl font-semibold text-navy-900">Message Received</h3>
         <p className="mt-2 text-sm leading-relaxed text-muted-600">
-          This is a demo submission — no email has been sent. Once a backend is connected,
-          messages like this will reach our team directly.
+          Thank you for reaching out. Our team will get back to you shortly.
         </p>
         <Button type="button" variant="secondary" className="mt-6" onClick={() => setStatus("idle")}>
           Send Another Message
@@ -196,7 +202,10 @@ export default function ContactForm() {
 
       {status === "error" && (
         <p role="alert" className="text-sm text-red-600">
-          Something went wrong submitting the demo form. Please try again.
+          Something went wrong sending your message. Please try again, or reach out to us directly.
+          {errorDetail && (
+            <span className="mt-1 block text-xs text-red-400">Details: {errorDetail}</span>
+          )}
         </p>
       )}
 
