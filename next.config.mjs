@@ -5,7 +5,7 @@
 
 const nextConfig = {
   /* config options here */
-  output: 'export',
+  // Removed 'output: export' to allow dynamic API routes for backend
   images: {
     unoptimized: true,
   },

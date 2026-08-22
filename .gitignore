@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Server uploads and media
+/public/uploads/
+/uploads/
+
+# Logs
+/logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
